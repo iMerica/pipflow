@@ -42,7 +42,7 @@ Add a new package
 
 Remove a package
 
-    pipflow upgrade <package-name>
+    pipflow remove <package-name>
     
 Upgrade a package version
 
