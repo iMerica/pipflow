@@ -17,7 +17,7 @@ class CommandError(BaseException):
     pass
 
 
-class PyperMixin:
+class PipFlowMixin:
 
     @staticmethod
     def perform_backup():
@@ -72,7 +72,7 @@ def rebuild(func):
     return wrapper
 
 
-class BaseCommand(Command, PyperMixin):
+class BaseCommand(Command, PipFlowMixin):
     def initiate(self):
         self.original, self.backup = self.perform_backup()
 
