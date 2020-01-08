@@ -1,7 +1,6 @@
 from tempfile import mktemp
 from cleo import Command
 from shutil import copyfileobj
-import docker
 import requests
 from typing import Optional, Union
 from distutils.version import LooseVersion
@@ -75,7 +74,6 @@ def rebuild(func):
 
 class BaseCommand(Command, PyperMixin):
     def initiate(self):
-        self.client = docker.from_env()
         self.original, self.backup = self.perform_backup()
 
         self.packages = self.requirements_as_dict(self.original)
