@@ -156,3 +156,18 @@ class UpgradeAllCommand(BaseCommand):
         return 0
 
 
+class ViewAllUpgradesCommand(BaseCommand):
+    name = 'view-all'
+    help = 'View available upgrades for all packages'
+
+    def handle(self) -> Optional[int]:
+        self.packages = self.requirements_as_dict('requirements.txt')
+        table = self.table()
+        rows = []
+        table.set_header_row(['Package', 'Current', 'Latest'])
+        for package, current_version in self.packages.items():
+            latest_version = self.get_latest_version(package)
+            if LooseVersion(current_version) < LooseVersion(latest_version):
+                rows.append([package, current_version, latest_version])
+        table.set_rows(rows)
+        return table.render(self.io)
