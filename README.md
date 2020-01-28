@@ -52,6 +52,10 @@ Upgrade all packages
     
     pipflow upgrade-all
     
+
+Vew all packages eligible for upgrade
+
+    pipflow view-all
     
 ## License
 MIT Copyright (c) 2020 Michael.
