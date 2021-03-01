@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='Pipflow',
-    version='0.0.6',
+    version='0.1.0',
     description='Python Distribution Utilities',
     author='Michael Martinez',
     author_email='imichael@pm.me',
@@ -27,10 +27,10 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     python_requires='>=3.5',
-    install_requires=['cleo', 'requests'],
+    install_requires=['cleo=>0.8.1', 'requests'],
     entry_points={
         'console_scripts': [
-            'pipflow = pipflow.__main__:main'
+            'pipflow = pipflow.src.__main__:main'
         ]
     }
 )
