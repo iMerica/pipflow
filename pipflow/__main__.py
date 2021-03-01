@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-from src import AddCommand
-from src import RemoveCommand
-from src import UpdateCommand
-from src import UpgradeAllCommand
-from src import ViewAllUpgradesCommand
+from pipflow.src import AddCommand
+from pipflow.src import RemoveCommand
+from pipflow.src import UpdateCommand
+from pipflow.src import UpgradeAllCommand
+from pipflow.src import ViewAllUpgradesCommand
+
 from cleo import Application
 
 application = Application(complete=True)

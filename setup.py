@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 from os import path
+
 here = path.abspath(path.dirname(__file__))
 
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
@@ -23,14 +24,14 @@ setup(
         'Programming Language :: Python :: 3.8',
     ],
     keywords='Package Managers',
-    packages=find_packages(here),
+    packages=['pipflow', 'pipflow.src'],
     long_description=long_description,
     long_description_content_type='text/markdown',
     python_requires='>=3.5',
     install_requires=['cleo>=0.8.1', 'requests'],
     entry_points={
         'console_scripts': [
-            'pipflow = pipflow.src.__main__:main'
+            'pipflow = pipflow.__main__:main'
         ]
     }
 )
