@@ -8,7 +8,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='Pipflow',
-    version='0.1.0',
+    version='0.1.1',
     description='Python Distribution Utilities',
     author='Michael Martinez',
     author_email='imichael@pm.me',
