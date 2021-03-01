@@ -8,8 +8,8 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='Pipflow',
-    version='0.1.1',
-    description='Python Distribution Utilities',
+    version='0.1.2',
+    description='Package manager that compliments Docker-based workflows',
     author='Michael Martinez',
     author_email='imichael@pm.me',
     url='https://github.com/iMerica/pipflow',
