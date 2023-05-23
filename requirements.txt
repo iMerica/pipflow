@@ -1,4 +1,4 @@
 cleo==0.8.1
 docker==4.4.4
-requests==2.25.1
+requests==2.31.0
 #Django==3.0.1
